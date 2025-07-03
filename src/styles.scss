@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.btn-menu{
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: rgb(68, 55, 185);
+    cursor: pointer;
+    transition: .4s all;
+    &:hover{
+        background: rgb(234, 231, 254);
+
+    }
+}
