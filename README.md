@@ -1,6 +1,6 @@
 # MyProfile
 
-[![Deploy Pages](https://github.com/<TU_USUARIO>/<TU_REPO>/actions/workflows/deploy.yml/badge.svg)](https://github.com/<TU_USUARIO>/<TU_REPO>/actions)
+[![Deploy Pages](https://github.com/cristopheSaraosV/perfil/actions/workflows/main.yml/badge.svg)](https://github.com/cristopheSaraosV/perfil/actions)
 
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
