@@ -23,9 +23,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build library (ngx-separador-miles)
-        run: npx ng build ngx-separador-miles
-
       - name: Build Angular app
         run: npx ng build --configuration production --base-href /ngx-common-prosmart/
 
