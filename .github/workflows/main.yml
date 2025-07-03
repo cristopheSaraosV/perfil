@@ -1,23 +1,29 @@
 name: Deploy Angular 20 to GitHub Pages
 
+# Se dispara al hacer push en main
 on:
   push:
     branches:
       - main
 
+# Permisos necesarios para Pages
+permissions:
+  contents: read        # Leer el repo
+  pages: write          # Publicar en GitHub Pages
+  id-token: write       # Para autenticación OIDC (requerido por peaceiris)
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          persist-credentials: false
 
       - name: Setup Node.js v20
         uses: actions/setup-node@v3
         with:
-          node-version: '20.x'   # ahora usa Node 20 o superior
+          node-version: '20.x'   # Angular 20 requiere >=20.19
 
       - name: Install dependencies
         run: npm ci
@@ -34,6 +40,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/my-profile
+          publish_branch: gh-pages
+          publish_dir: ./dist/perfil   # Ajusta según tu angular.json (aquí asumo "perfil")
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
