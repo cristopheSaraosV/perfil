@@ -2,12 +2,12 @@ import { Component, ViewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { SidenavService } from '../../services/sidenav-service';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-sidenav',
-  imports: [MatSidenavModule, MatButtonModule,RouterOutlet, MatButtonModule,MatIconModule],
+  imports: [MatSidenavModule, MatButtonModule, MatButtonModule,MatIconModule,RouterModule],
   templateUrl: './sidenav.html',
   styleUrls: ['./sidenav.scss']
 })

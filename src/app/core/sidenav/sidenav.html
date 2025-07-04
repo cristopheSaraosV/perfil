@@ -1,11 +1,31 @@
 <mat-sidenav-container class="example-container" autosize>
-  <mat-sidenav #drawer class="example-sidenav" mode="side">
-    <button mat-button (click)="showFiller = !showFiller">
-      Inicio
-    </button>
+  <mat-sidenav #drawer mode="side" class="bg-coffe">
+    <div class="d-flex flex-column align-items-start text-start ">
+      <button class="btn-menu" routerLink="/home" routerLinkActive="bg-coffe">
+        Inicio
+      </button>
+  
+      <button class="btn-menu" routerLink="/sobre-mi" routerLinkActive="bg-coffe">
+        Sobre mi
+      </button>
+  
+      <button class="btn-menu" routerLink="/experiencia" routerLinkActive="bg-coffe">
+        Experiencia
+      </button>
+  
+      <button class="btn-menu" routerLink="/skills" routerLinkActive="bg-coffe">
+        Skills
+      </button>
+  
+      <button class="btn-menu" routerLink="/contacto" routerLinkActive="bg-coffe">
+        Contacto
+      </button>
+
+    </div>
+
   </mat-sidenav>
 
-  <mat-sidenav-content class="p-3">
+  <mat-sidenav-content class="p-3 bg-coffe">
     <router-outlet/>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,17 +1,50 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+@use '../theme-colors' as custom;
+// =======================
+// 1. Tema claro (por defecto)
+// =======================
+html {
+  @include mat.theme((
+    color: (
+      primary:mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+  
+} 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
 
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 
-.btn-menu{
-    width: 100%;
-    height: 60px;
-    font-size: 18px;
-    color: rgb(68, 55, 185);
-    cursor: pointer;
-    transition: .4s all;
-    &:hover{
-        background: rgb(234, 231, 254);
+ }
 
-    }
+.bg-coffe-dark{
+  background: #84692c !important;
+  color: rgb(255, 252, 245) !important;
+}
+
+.bg-coffe-media-dark{
+  background: #d4c7a8 !important;
+  color: #362806 !important;
+}
+
+.bg-coffe{
+   background-color: #fffcf5 !important;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  color: #6c3d33 !important;
+}
+
+h1{
+  font-weight: 400 !important;
+
 }
