@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { Sidenav } from './components/core/sidenav/sidenav';
+import { Toolbar } from './core/toolbar/toolbar';
+import { Sidenav } from './core/sidenav/sidenav';
 
 @Component({
   selector: 'app-root',
-  imports: [Sidenav],
+  imports: [Toolbar,Sidenav],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

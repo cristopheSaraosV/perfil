@@ -1,0 +1,39 @@
+/* Para que llene toda la pantalla */
+:host, 
+html, 
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Contenedor principal full-size */
+.example-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* Contenido del drawer */
+.example-sidenav {
+  padding: 20px;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Contenido principal alineado al centro */
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+button{
+  width: 200px;
+  height: 50px;
+  transition: .6s;
+  color: black;
+  &:hover{
+    background: rgb(83, 83, 171);
+    color: white;
+  }
+}

@@ -1,8 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { SidenavService } from '../../../services/sidenav-service';
-import { MatButtonModule } from '@angular/material/button';
+import { SidenavService } from '../../services/sidenav-service';
 
 @Component({
   selector: 'app-toolbar',
@@ -11,9 +11,9 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './toolbar.scss'
 })
 export class Toolbar {
-  sidenavService =inject(SidenavService)
+  constructor(private sidenavService: SidenavService) {}
 
-  toggleSidenav(): void {
+  openMenu() {
     this.sidenavService.toggle();
   }
 }
